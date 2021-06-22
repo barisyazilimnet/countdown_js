@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>Barış Yazılım</title>
+        <link rel="shortcut icon" href="img/site_icon.png" type="image/x-icon">
+    </head>
+    <body>
+        <div class="medium">
+            <h1>Barış Yazılım</h1>
+            <div id="saat"></div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        <script src="countdown.js"></script>
+        <script type="text/javascript">
+            $('#saat').countdown('2022/1/1', function(event){
+                var $this=$(this).html(event.strftime(''
+                    +'<div><span>%w</span><span>Hafta</span></div>'
+                    +'<div><span>%d</span><span>Gün</span></div>'
+                    +'<div><span>%H</span><span>Saat</span></div>'
+                    +'<div><span>%M</span><span>Dakika</span></div>'
+                    +'<div><span>%S</span><span>Saniye</span></div>'
+                ))
+            })
+        </script>
+    </body>
+</html>
